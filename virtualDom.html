@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>虚拟dom</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="virtual.js"></script>
+  <script>
+    let virtualDom=createElement('ul',{class:'ul'},[
+      createElement('li',{class:'li'},['li1']),
+      createElement('li',{class:'li'},['li2']),
+      createElement('li',{class:'li'},['li3'])
+    ])
+    let el=render(virtualDom);
+    renderDom(el,document.getElementById('app'));
+    console.log(el)
+  </script>
+</body>
+</html>
